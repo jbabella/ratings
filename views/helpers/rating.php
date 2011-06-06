@@ -48,8 +48,20 @@ class RatingHelper extends HtmlHelper {
 		'link' => true,
 		'redirect' => true,
 		'class' => 'rating');
-
+  
+  private static $scriptDefault = array('js'=>array('jquery-1.6.1.min','jquery-ui-1.8.13.custom.min'),'jquery.ui.stars','css'=>array('jquery-ui-1.8.13.custom','jquery.ui.stars'));
+  
 /**
+ * Load required scripts needed by ratings
+ */
+  
+  public function loadScripts($scripts=array()){
+    if(empty ($scripts)){
+      $scripts = $this->scriptDefault;
+    }
+  }
+
+  /**
  * Displays a bunch of rating links wrapped into a list element of your choice
  *
  * @param array $options
