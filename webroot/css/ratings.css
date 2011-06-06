@@ -1,0 +1,33 @@
+.ui-stars-star, .ui-stars-cancel {
+    cursor: pointer;
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-indent: -999em;
+}
+.ui-stars-star a, .ui-stars-cancel a {
+    background: url("crystal-stars.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 26px;
+    position: relative;
+    width: 28px;
+}
+.ui-stars-star a {
+    background-position: 0 -56px;
+}
+.ui-stars-star-on a {
+    background-position: 0 -84px;
+}
+.ui-stars-star-hover a {
+    background-position: 0 -112px;
+}
+.ui-stars-cancel-hover a {
+    background-position: 0 -28px;
+}
+.ui-stars-star-disabled, .ui-stars-star-disabled a, .ui-stars-cancel-disabled a {
+    cursor: default !important;
+}
+
+#stars-wrapper1 label{
+  display: none;
+}
